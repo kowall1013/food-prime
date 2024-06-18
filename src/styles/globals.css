@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 body {
-  color: #f8fafc;
-  background: #0f172a;
+  @apply min-h-screen bg-slate-900 text-gray-50;
 }
