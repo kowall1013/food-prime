@@ -1,6 +1,6 @@
 import { IconProps } from "./types";
 
-export const HamburgerIcon: React.FC<IconProps> = ({
+export const Hamburger: React.FC<IconProps> = ({
   stroke = "currentColor",
   height = 16,
   ...props
