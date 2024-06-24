@@ -27,9 +27,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// Path: Colors
-//Violet
-//Gray
-//Red
-//Green

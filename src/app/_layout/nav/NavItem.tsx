@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 //Helpers
-import { cn } from "@/app/_helpers";
+import { cn } from "@/app/_utils/tailwind-merge";
 
 interface NavItemProps {
   to: string;
