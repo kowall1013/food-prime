@@ -1,2 +1,2 @@
-export * as Icon from "./nav-icon";
-export * from "./hamburger";
+export * as HomeIcon from "./icons/home";
+export * as HamburgerIcon from "./icons/hamburger";

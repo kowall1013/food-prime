@@ -1,6 +1,6 @@
-import { IconProps } from "../types";
+import { IconProps } from "./types";
 
-export const HomeIcon: React.FC<IconProps> = ({
+export const Home: React.FC<IconProps> = ({
   stroke = "currentColor",
   height = 16,
   ...props
