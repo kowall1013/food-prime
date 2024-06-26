@@ -1,8 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
+//Reducers
+import settingsReducer from "@/lib/features/settings/settingsSlice";
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {},
+    reducer: {
+      settings: settingsReducer,
+    },
+    devTools: true,
   });
 };
 
