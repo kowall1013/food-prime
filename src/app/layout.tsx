@@ -1,6 +1,9 @@
-import "@/styles/globals.css";
-
+//Redux
+import { ReduxProvider } from "./StoreProvider";
+//Components
 import { Header, Nav } from "./_layout";
+//Styles
+import "@/styles/globals.css";
 
 export const metadata = {
   title: "Create T3 App",
@@ -16,13 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans">
-        <div className="grid h-lvh grid-cols-1 grid-rows-[4rem_minmax(0,_1fr)]">
-          <Header />
-          <div className="col-span-1">
-            <Nav />
+        <ReduxProvider>
+          <div className="grid h-lvh grid-cols-1 grid-rows-[4rem_minmax(0,_1fr)]">
+            <Header />
+            <div className="col-span-1">
+              <Nav />
+            </div>
+            {children}
           </div>
-          {children}
-        </div>
+        </ReduxProvider>
       </body>
     </html>
   );
