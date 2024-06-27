@@ -30,7 +30,7 @@ export default function Header() {
           <icon.Hamburger className="h-8 w-8" />
         </Button>
         <div className="flex items-center gap-4">
-          <Button variant="primary">Primary</Button>
+          <Button>Primary</Button>
         </div>
       </div>
     </header>

@@ -13,29 +13,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Contained: Story = {
   args: {
-    variant: "primary",
-    children: "Primary Button",
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: "sm",
-    children: "Small Button",
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: "lg",
-    children: "Large Button",
-  },
-};
-
-export const Icon: Story = {
-  args: {
-    size: "icon",
+    variant: "contained",
+    children: "Contained Button",
   },
 };
