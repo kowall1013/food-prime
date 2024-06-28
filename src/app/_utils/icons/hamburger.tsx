@@ -2,7 +2,6 @@ import { IconProps } from "./types";
 
 export const Hamburger: React.FC<IconProps> = ({
   stroke = "currentColor",
-  height = 16,
   ...props
 }) => {
   return (
@@ -12,6 +11,7 @@ export const Hamburger: React.FC<IconProps> = ({
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke={stroke}
+      className="h-5 w-5"
       {...props}
     >
       <path

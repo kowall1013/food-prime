@@ -24,14 +24,12 @@ export default function Header() {
 
         <Button
           size="icon"
+          variant="outlined"
           className="md:hidden"
           onClick={() => dispatch(toggleMenu())}
         >
-          <icon.Hamburger className="h-8 w-8" />
+          <icon.Hamburger />
         </Button>
-        <div className="flex items-center gap-4">
-          <Button>Primary</Button>
-        </div>
       </div>
     </header>
   );
