@@ -6,31 +6,27 @@ import { cn } from "@/app/_utils/tailwind-merge";
 import { ButtonHTMLAttributes } from "react";
 
 const buttonVariants = cva(
-  "flex jusitfy-center items-center rounded-md border-transparent text-white text-base whitespace-nowrap duration-300  disabled:pointer-events-none",
+  "justify-center items-center rounded-md flex border-transparent text-gray-50 text-base whitespace-nowrap disabled:pointer-events-none  duration-300 leading-7 min-w-8 h-10",
   {
     variants: {
       variant: {
-        default:
-          "border-gray-200 hover:bg-gray-100 hover:border-gray-100 disabled:text-gray-200",
-        primary:
-          "bg-blue-600 text-white hover:bg-blue-500 disabled::text-blue-200",
-        plain:
-          "text-gray-400 hover:text-gray-100 hover:border-gray-100 disabled:text-gray-200",
-        destructive:
-          "text-white bg-red-600 hover:bg-red-500  disabled:bg-red-50 disabled:text-red-200",
+        contained:
+          "bg-indigo-700  hover:bg-indigo-600 active:bg-indigo-800 disabled:bg-gray-700 disabled:text-gray-400 disabled:font-semibold",
+        outlined:
+          "border-indigo-700 border  hover:border-indigo-500  active:border-indigo-800 disabled:bg-gray-700 disabled:text-gray-400 disabled:font-semibold ",
       },
       size: {
-        default: "px-4 py-2.5",
-        sm: "px-3 py-1.5",
-        lg: "px-6 py-3.5",
+        default: "px-4",
+        sm: "px-3",
+        lg: "px-6",
         icon: "p-2.5",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "contained",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
@@ -48,7 +44,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

@@ -24,11 +24,11 @@ export default function Header() {
 
         <Button
           size="icon"
-          variant="plain"
+          variant="outlined"
           className="md:hidden"
           onClick={() => dispatch(toggleMenu())}
         >
-          <icon.Hamburger className="h-8 w-8" />
+          <icon.Hamburger />
         </Button>
       </div>
     </header>
