@@ -25,7 +25,7 @@ export const Nav = () => {
     <Drawer isOpen={isOpen} onClose={handleClose}>
       <nav>
         <ul>
-          <h1>siema</h1>
+          <h1>siemaa</h1>
         </ul>
       </nav>
     </Drawer>
