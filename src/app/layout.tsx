@@ -1,7 +1,8 @@
 //Redux
 import { ReduxProvider } from "./StoreProvider";
 //Components
-import { Header, Nav } from "./_layout";
+import { Header } from "./_layout/header/Header";
+import { Nav } from "./_layout/nav/Nav";
 //Styles
 import "@/styles/globals.css";
 
