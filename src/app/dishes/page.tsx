@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <div>
-      <h1>Foods</h1>
+      <h1>Dishes</h1>
     </div>
   );
 }
