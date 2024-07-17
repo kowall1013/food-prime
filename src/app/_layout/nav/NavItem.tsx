@@ -10,25 +10,25 @@ interface NavItemProps {
   to: string;
   label: string;
   icon: React.ReactNode;
-  isActive?: boolean;
 }
 
 export const NavItem: React.FC<NavItemProps> = ({
   to,
   label,
   icon,
-  isActive = true,
   ...props
 }) => {
   const pathname = usePathname();
+
+  const isActive = pathname === to;
 
   return (
     <Link
       {...props}
       href={to}
       className={cn([
-        "flex items-center space-x-4 p-4 ",
-        { isActive: "border-r-2 border-solid border-blue-700" },
+        "flex items-center space-x-4 rounded-r-md p-2",
+        { "border-l-2 border-solid border-blue-700 bg-slate-700": isActive },
       ])}
     >
       <span>{icon}</span>
