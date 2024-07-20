@@ -23,16 +23,18 @@ export const NavItem: React.FC<NavItemProps> = ({
   const isActive = pathname === to;
 
   return (
-    <Link
-      {...props}
-      href={to}
+    <li
       className={cn([
-        "flex items-center space-x-4 rounded-r-md p-2",
+        "rounded-r-md p-2",
         { "border-l-2 border-solid border-blue-700 bg-slate-700": isActive },
       ])}
     >
-      <span>{icon}</span>
-      <span>{label}</span>
-    </Link>
+      <Link {...props} href={to}>
+        <div className="flex items-center space-x-4">
+          <span>{icon}</span>
+          <span>{label}</span>
+        </div>
+      </Link>
+    </li>
   );
 };

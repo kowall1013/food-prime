@@ -18,7 +18,9 @@ export const NavWrapper = () => {
   const pathname = usePathname();
   const dispatch = useAppDispatch();
   const isOpen = useAppSelector((state) => state.settings.isMenuOpen);
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = useMediaQuery("(min-width: 768px)", {
+    initializeWithValue: false,
+  });
 
   const handleClose = () => {
     dispatch(toggleMenu());
