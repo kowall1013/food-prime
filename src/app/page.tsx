@@ -2,8 +2,7 @@ import * as Table from "@/app/_shared/table";
 
 export default function Dashboard() {
   return (
-    <div>
-      <h1>Table</h1>
+    <div className="max-w-5xl p-20">
       <Table.Table>
         <Table.TableHead>
           <Table.TableRow>

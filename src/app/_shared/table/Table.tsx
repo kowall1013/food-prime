@@ -12,9 +12,11 @@ const TableContext = createContext(defualtTableContext);
 export const Table = ({ children }: TableProps) => {
   return (
     <TableContext.Provider value={defualtTableContext}>
-      <table className="table w-full min-w-[750px] border-collapse border-spacing-0 bg-gray-800">
-        {children}
-      </table>
+      <div className="w-full overflow-x-auto rounded">
+        <table className="table w-full min-w-[750px] border-collapse border-spacing-0 bg-gray-800">
+          {children}
+        </table>
+      </div>
     </TableContext.Provider>
   );
 };

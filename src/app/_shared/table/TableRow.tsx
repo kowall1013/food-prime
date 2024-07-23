@@ -2,5 +2,5 @@
 import { TableProps } from "./types";
 
 export const TableRow = ({ children }: TableProps) => {
-  return <tr>{children}</tr>;
+  return <tr className="table-row align-middle text-inherit">{children}</tr>;
 };
