@@ -1,4 +1,43 @@
 import * as Table from "@/app/_shared/table";
+interface Data {
+  product: string;
+  weight: number;
+  calories: number;
+  fat: number;
+  carbs: number;
+  protein: number;
+}
+interface HeadCell {
+  id: keyof Data;
+  label: string;
+}
+
+const headCells: readonly HeadCell[] = [
+  {
+    id: "product",
+    label: "Product",
+  },
+  {
+    id: "weight",
+    label: "Weight (g)",
+  },
+  {
+    id: "calories",
+    label: "Calories",
+  },
+  {
+    id: "fat",
+    label: "Fat (g)",
+  },
+  {
+    id: "carbs",
+    label: "Carbs (g)",
+  },
+  {
+    id: "protein",
+    label: "Protein (g)",
+  },
+];
 
 export default function Dashboard() {
   return (

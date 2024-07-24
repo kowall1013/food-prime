@@ -1,25 +1,21 @@
-import { PropsWithChildren } from "react";
 //Utils
 import { cn } from "@/app/_utils/tailwind-merge";
-//Types
-import { TableProps } from "./types";
 
-type TableCellProps = PropsWithChildren<TableProps>;
+interface Props {
+  children: React.ReactNode;
+  className?: string;
+  order?: "asc" | "desc";
+  orderBy?: string;
+  onSort?: (id: string) => void;
+}
 
-export const TableCell = ({
-  children,
-  className,
-  ...props
-}: TableCellProps) => {
+export const TableCell = ({ children, order, orderBy, onSort, className, ...props }: Props) => {
   return (
     <th
-      className={cn(
-        "font table-cell border-b border-slate-50 p-4 text-left text-sm font-medium text-white",
-        className,
-      )}
+      className={cn("font table-cell border-b border-slate-50 p-4 text-left text-sm font-medium text-white", className)}
       {...props}
     >
-      {children}
+      {onSort ? <TableSortLabel>{children}</TableSortLabel> : children}
     </th>
   );
 };

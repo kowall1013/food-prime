@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-sans">
         <ReduxProvider>
-          <div className="grid md:grid-cols-[300px_minmax(0,_1fr)]">
+          <div className="grid grid-cols-[minmax(0,_1fr)] md:grid-cols-[300px_minmax(0,_1fr)]">
             <Header />
             <div className="col-span-1">
               <NavWrapper />

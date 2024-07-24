@@ -2,20 +2,21 @@
 
 //External
 import React, { createContext, useContext } from "react";
-//Types
-import { TableProps } from "./types";
 
 const defualtTableContext = {};
 
 const TableContext = createContext(defualtTableContext);
 
-export const Table = ({ children }: TableProps) => {
+interface Props {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const Table = ({ children }: Props) => {
   return (
     <TableContext.Provider value={defualtTableContext}>
       <div className="w-full overflow-x-auto rounded">
-        <table className="table w-full min-w-[750px] border-collapse border-spacing-0 bg-gray-800">
-          {children}
-        </table>
+        <table className="table w-full min-w-[750px] border-collapse border-spacing-0 bg-gray-800">{children}</table>
       </div>
     </TableContext.Provider>
   );
